@@ -28,17 +28,15 @@ toggleRef.addEventListener('change', ()=>{
     if(document.body.classList.contains(Theme.DARK)){
         localStorage.setItem('theme', Theme.DARK);
     }else{
-
         localStorage.setItem('theme', Theme.LIGHT);
     }
-
-    if(document.body.classList.contains(Theme.LIGHT) && document.body.classList.contains(Theme.DARK)){
-        if(theme === Theme.LIGHT){
-            document.body.classList.remove(Theme.DARK)
-        }
-        if(theme === Theme.DARK){
-            document.body.classList.remove(Theme.LIGHT)
-        }
-    }
-
 })
+
+if(document.body.classList.contains(Theme.LIGHT) && document.body.classList.contains(Theme.DARK)){
+    if(theme === Theme.LIGHT){
+        document.body.classList.remove(Theme.DARK)
+    }
+    if(theme === Theme.DARK){
+        document.body.classList.remove(Theme.LIGHT)
+    }
+}
